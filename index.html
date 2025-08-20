@@ -1,0 +1,140 @@
+<?php
+$counterFile = "counter.txt";
+if (!file_exists($counterFile)) file_put_contents($counterFile, "0");
+$count = (int)file_get_contents($counterFile);
+$count++;
+file_put_contents($counterFile, $count);
+?>
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>KUA Pitu Riase - Beranda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+</head>
+<body class="bg-green-50 text-gray-800">
+
+  <!-- Header -->  
+<header class="bg-green-800 text-white shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-3">
+        <img src="logo.png" alt="Logo Kemenag" class="w-10 h-10">
+        <span class="text-xl font-bold">KUA Pitu Riase</span>
+      </div>
+      <nav class="hidden md:flex items-center space-x-6">
+  <a href="index.html" class="hover:underline">Beranda</a>
+  <a href="profil.php" class="hover:underline">Profil</a>
+  <a href="berita.php" class="hover:underline">Berita</a>
+  <a href="pengumuman.php" class="hover:underline">Pengumuman</a>
+  <a href="galeri.php" class="hover:underline">Galeri</a>
+  <a href="unduhan.php" class="hover:underline">Unduhan</a>
+  <a href="form_pengaduan.php" class="hover:underline">Pengaduan</a>
+  <a href="login.html" class="bg-white text-green-800 px-3 py-1 rounded hover:bg-green-100 transition text-sm font-semibold ml-4">
+    <i class="fas fa-lock mr-1"></i>Login Admin
+  </a>
+</nav>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-green-700 text-white py-20 text-center">
+    <h1 class="text-3xl md:text-4xl font-bold mb-2">Selamat Datang di Sistem Informasi KUA Pitu Riase</h1>
+    <p class="text-lg">Melayani dengan Ikhlas dan Profesional</p>
+  </section>
+ 
+<!-- Tombol SOP Pelayanan -->
+<div class="text-center my-4">
+  <a href="#sop" class="inline-block bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded shadow">
+    Lihat SOP Pelayanan
+  </a>
+</div>
+
+  <!-- Menu Layanan -->
+  <section class="max-w-6xl mx-auto py-12 px-6">
+    <h2 class="text-2xl font-semibold text-green-800 text-center mb-10">Layanan Publik</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <a href="buku_tamu.php" class="bg-white p-6 rounded shadow hover:shadow-lg text-center">
+        <i class="fas fa-book-open text-3xl text-blue-600 mb-2"></i>
+        <h3 class="font-semibold">Buku Tamu</h3>
+      </a>
+      <a href="pengumuman.php" class="bg-white p-6 rounded shadow hover:shadow-lg text-center">
+        <i class="fas fa-bullhorn text-3xl text-green-600 mb-2"></i>
+        <h3 class="font-semibold">Pengumuman Resmi</h3>
+      </a>
+      <a href="unduhan.php" class="bg-white p-6 rounded shadow hover:shadow-lg text-center">
+        <i class="fas fa-download text-3xl text-blue-600 mb-2"></i>
+        <h3 class="font-semibold">Unduh Dokumen</h3>
+      </a>
+      <a href="galeri.php" class="bg-white p-6 rounded shadow hover:shadow-lg text-center">
+        <i class="fas fa-image text-3xl text-purple-600 mb-2"></i>
+        <h3 class="font-semibold">Galeri Kegiatan</h3>
+      </a>
+      <a href="berita.php" class="bg-white p-6 rounded shadow hover:shadow-lg text-center">
+        <i class="fas fa-newspaper text-3xl text-red-600 mb-2"></i>
+        <h3 class="font-semibold">Berita KUA</h3>
+      </a>
+      <a href="profil.php" class="bg-white p-6 rounded shadow hover:shadow-lg text-center">
+        <i class="fas fa-user-shield text-3xl text-indigo-600 mb-2"></i>
+        <h3 class="font-semibold">Profil KUA</h3>
+        </a>
+      <a href="form_pengaduan.php" class="bg-white p-6 rounded shadow hover:shadow-lg text-center">
+        <i class="fas fa-comments text-3xl text-yellow-600 mb-2"></i>
+        <h3 class="font-semibold">Kirim Pengaduan</h3>
+      </a>
+    </div>
+  </section>
+
+<section id="sop" class="max-w-6xl mx-auto mt-12 px-4 py-6 bg-white rounded shadow">
+  <h2 class="text-2xl font-bold text-green-700 mb-4 text-center"> Standar Operasional Pelayanan Kantor Urusan Agama Kecamatan Pitu Riase </h2>
+  <div class="overflow-x-auto">
+    <table class="w-full text-sm border border-gray-300">
+      <thead class="bg-green-100 text-green-900">
+        <tr>
+          <th class="border px-2 py-2">No</th>
+          <th class="border px-2 py-2">Jenis Pelayanan</th>
+          <th class="border px-2 py-2">Waktu Penyelesaian</th>
+          <th class="border px-2 py-2">Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="border px-2 py-1 text-center">1</td><td class="border px-2 py-1">Pelayanan Nikah & Rujuk</td><td class="border px-2 py-1">Temporer</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">2</td><td class="border px-2 py-1">Penyerahan Formulir Nikah</td><td class="border px-2 py-1">15 Menit</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">3</td><td class="border px-2 py-1">Tata Persuratan Pernikahan</td><td class="border px-2 py-1">10 Menit</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">4</td><td class="border px-2 py-1">Pendaftaran Nikah Model N7</td><td class="border px-2 py-1">15 Menit</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">5</td><td class="border px-2 py-1">Pemeriksaan Nikah</td><td class="border px-2 py-1">60 Menit</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">6</td><td class="border px-2 py-1">Legalisir Akta Nikah</td><td class="border px-2 py-1">10 Menit</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">7</td><td class="border px-2 py-1">Duplikat Nikah</td><td class="border px-2 py-1">30 Menit</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">8</td><td class="border px-2 py-1">Surat Keterangan</td><td class="border px-2 py-1">15 Menit</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">9</td><td class="border px-2 py-1">Kursus Pra Nikah</td><td class="border px-2 py-1">60 Menit</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">10</td><td class="border px-2 py-1">Akta Ikrar Wakaf</td><td class="border px-2 py-1">10 Menit</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">11</td><td class="border px-2 py-1">Penetapan Arah Kiblat</td><td class="border px-2 py-1">1 Jam</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">12</td><td class="border px-2 py-1">Masuk Islam</td><td class="border px-2 py-1">20 Menit</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">13</td><td class="border px-2 py-1">Konsultasi Keluarga</td><td class="border px-2 py-1">30 Menit</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">14</td><td class="border px-2 py-1">Informasi Haji</td><td class="border px-2 py-1">15 Menit</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+        <tr><td class="border px-2 py-1 text-center">15</td><td class="border px-2 py-1">Pembinaan Keagamaan</td><td class="border px-2 py-1">Temporer</td><td class="border px-2 py-1">Setiap Hari Kerja</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-green-800 text-white py-6 mt-10">
+    <div class="max-w-6xl mx-auto px-4 text-center text-sm">
+      <p>&copy; 2025 KUA Pitu Riase | Kementerian Agama Republik Indonesia</p>
+      <p>Alamat: Jl. Contoh No. 1, Pitu Riase, Sulawesi Selatan</p>
+    </div>
+  </footer>
+
+</body>
+</html>

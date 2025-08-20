@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulir Pengaduan - KUA Pitu Riase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-green-50">
+  <div class="max-w-xl mx-auto p-6 mt-10 bg-white shadow rounded">
+    <h1 class="text-2xl font-bold text-green-700 mb-6 text-center">Formulir Pengaduan</h1>
+    <form action="simpan_pengaduan.php" method="POST">
+      <div class="mb-4">
+        <label class="block mb-1 font-semibold">Nama Lengkap</label>
+        <input type="text" name="nama" required class="w-full border p-2 rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block mb-1 font-semibold">Email</label>
+        <input type="email" name="email" required class="w-full border p-2 rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block mb-1 font-semibold">Isi Pengaduan</label>
+        <textarea name="isi" rows="5" required class="w-full border p-2 rounded"></textarea>
+      </div>
+      <button type="submit" class="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 w-full">Kirim Pengaduan</button>
+    </form>
+  </div>
+</body>
+</html>
